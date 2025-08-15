@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Siddhartha Nursery</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌱 Siddhartha Nursery</h1>
+      <div class="top-actions">
+        <a href="/farmers.html" class="btn secondary">Open Farmers Page ↗</a>
+        <button id="download" class="btn secondary">Download Excel</button>
+        <button id="logout" class="btn">Logout</button>
+      </div>
+    </header>
+
+    <div class="card">
+      <p><strong>₹40</strong> per tray. Status becomes <strong>Done</strong> when balance is ₹0.</p>
+      <h3>Add / Edit Farmer</h3>
+      <div class="row">
+        <div>
+          <label>Farmer Name *</label>
+          <input id="name" placeholder="Name"/>
+        </div>
+        <div>
+          <label>Village *</label>
+          <input id="village" placeholder="Village"/>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label>Phone</label>
+          <input id="phone" placeholder="Phone"/>
+        </div>
+        <div>
+          <label>Price per Tray (₹)</label>
+          <input id="pricePerTray" type="number" value="40"/>
+        </div>
+      </div>
+
+      <div style="margin-top:12px">
+        <span class="pill">Seed Types</span>
+        <div class="seed-row">
+          <input id="seedName" placeholder="e.g., Tomato"/>
+          <input id="seedTrays" type="number" value="0"/>
+          <button id="addSeed" class="btn secondary">＋</button>
+        </div>
+        <div id="seedList"></div>
+      </div>
+
+      <div class="row" style="margin-top:12px">
+        <div>
+          <label>Advance (₹)</label>
+          <input id="advance" type="number" value="0"/>
+        </div>
+        <div>
+          <label>&nbsp;</label>
+          <div class="stats">
+            <span class="pill" id="pTrays">Total Trays: 0</span>
+            <span class="pill" id="pTotal">Total Bill: ₹0</span>
+            <span class="pill" id="pPay">Yet to Pay: ₹0</span>
+            <span class="pill" id="pStatus">Status: Pending</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px" class="right">
+        <button id="save" class="btn">💾 Save</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Farmers (quick view)</h3>
+      <input id="search" placeholder="Search farmer..."/>
+      <div id="list"></div>
+    </div>
+  </div>
+
+  <script src="/shared.js"></script>
+  <script src="/main.js"></script>
+  <script src="/protect.js"></script>
+</body>
+</html>
